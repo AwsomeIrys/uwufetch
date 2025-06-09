@@ -91,7 +91,6 @@ def print_fastfetch():
     max_logo_width = max(len(line) for line in logo_lines)
     pad = " " * 2
 
-    # Match each line of ASCII art with info line if available
     for i in range(max(len(logo_lines), len(info))):
         logo_part = logo_lines[i] if i < len(logo_lines) else " " * max_logo_width
         info_part = info[i] if i < len(info) else ""
