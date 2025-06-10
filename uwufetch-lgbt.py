@@ -98,8 +98,15 @@ gentoo_logo = [
     "`/ohdmmddhys+++/:.`                    ",
     "  `-//////:--.                         ",
 ]
-
 PRIDE_FLAGS = {
+    "rainbow": [
+        "\033[38;5;196m",  # Red
+        "\033[38;5;202m",  # Orange
+        "\033[38;5;226m",  # Yellow
+        "\033[38;5;46m",   # Green
+        "\033[38;5;21m",   # Blue
+        "\033[38;5;93m",   # Purple
+    ],
     "trans": [
         "\033[38;5;45m",   # Light Blue
         "\033[38;5;231m",  # White
@@ -136,9 +143,26 @@ PRIDE_FLAGS = {
         "\033[38;5;16m",   # Black
         "\033[38;5;21m",   # Blue
         "\033[38;5;196m",  # Red
-    ]
+    ],
+    "progress": [
+        "\033[38;5;196m",  # Red
+        "\033[38;5;202m",  # Orange
+        "\033[38;5;226m",  # Yellow
+        "\033[38;5;46m",   # Green
+        "\033[38;5;21m",   # Blue
+        "\033[38;5;16m",   # Black
+        "\033[38;5;244m",  # Gray (white stripe)
+        "\033[38;5;51m",   # Cyan (trans stripe)
+    ],
+    "ace": [
+        "\033[38;5;16m",   # Black
+        "\033[38;5;244m",  # Gray
+        "\033[38;5;231m",  # White
+        "\033[38;5;205m",  # Purple
+    ],
 }
 
+# Alias mapping for user-friendly flag names
 FLAG_ALIASES = {
     "transgender": "trans",
     "trans": "trans",
@@ -150,7 +174,11 @@ FLAG_ALIASES = {
     "nonbinary": "nonbinary",
     "nb": "nonbinary",
     "genderfluid": "genderfluid",
+    "progress": "progress",
+    "ace": "ace",
+    "rainbow": "rainbow",
 }
+
 
 def print_fastfetch_with_pride(flag="rainbow"):
     flag_key = FLAG_ALIASES.get(flag.lower(), "rainbow")
